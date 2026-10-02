@@ -6,6 +6,9 @@ export default defineConfig({
   description: 'Polytoria Unified Naming Convention',
   base: process.env.BASE_PATH || '/',
   cleanUrls: true,
+  sitemap: {
+    hostname: 'https://punc.bjarnos.dev/'
+  },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/pUNC.svg' }]
   ],
