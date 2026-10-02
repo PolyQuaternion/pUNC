@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 84" width="210" height="84" fill="none">
+  <defs>
+    <linearGradient id="badge-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#171e36" />
+    </linearGradient>
+
+    <linearGradient id="badge-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7381ff" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#384260" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#a8b1ff" stop-opacity="0.8" />
+    </linearGradient>
+
+    <radialGradient id="logo-glow" cx="24%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#7381ff" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#7381ff" stop-opacity="0" />
+    </radialGradient>
+
+    <g id="sparkle-4">
+      <path d="M 0,-4 Q 0,0 4,0 Q 0,0 0,4 Q 0,0 -4,0 Q 0,0 0,-4 Z" fill="#c7d2fe" />
+    </g>
+
+    <g id="sparkle-5">
+      <polygon points="0,-4 1.18,-1.24 4.16,-1.24 1.75,0.51 2.67,3.24 0,1.55 -2.67,3.24 -1.75,0.51 -4.16,-1.24 -1.18,-1.24" fill="#c7d2fe" />
+    </g>
+  </defs>
+
+  <rect x="1" y="1" width="208" height="82" rx="16" fill="url(#badge-bg)" stroke="url(#badge-border)" stroke-width="1.5" />
+  <rect x="1" y="1" width="208" height="82" rx="16" fill="url(#logo-glow)" />
+
+  <use href="#sparkle-4" x="22" y="15" transform="scale(0.85)" opacity="0.35" />
+  <use href="#sparkle-5" x="84" y="14" transform="scale(0.9)" opacity="0.45" />
+  <use href="#sparkle-4" x="188" y="16" transform="scale(1.1)" opacity="0.7" />
+  <use href="#sparkle-4" x="194" y="44" transform="scale(0.75)" opacity="0.3" />
+  <use href="#sparkle-5" x="178" y="68" transform="scale(0.95)" opacity="0.55" />
+  <use href="#sparkle-4" x="98" y="70" transform="scale(0.7)" opacity="0.3" />
+  <use href="#sparkle-4" x="18" y="71" transform="scale(0.65)" opacity="0.25" />
+
+  <g transform="translate(42, 42) scale(0.155)">
+    <polygon points="0,-170 148,-85 148,85 0,170 -148,85 -148,-85"
+             fill="#0A101D" stroke="#1E293B" stroke-width="24" stroke-linejoin="round"/>
+
+    <path d="M 0 -170 L 148 -85 L 148 85 L 0 170"
+          fill="none" stroke="#7381ff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -148 85 L -148 -85 L 0 -170"
+          fill="none" stroke="#a8b1ff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M -64 -44 L -4 16 L -64 76"
+          fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="20" y1="76" x2="68" y2="76"
+          stroke="#d4d8ff" stroke-width="24" stroke-linecap="round"/>
+  </g>
+
+  <text x="80" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="0.4" fill="#a8b1ff">pUNC</text>
+  <text x="80" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2.2" fill="#ffffff">COMPLIANT</text>
+</svg>

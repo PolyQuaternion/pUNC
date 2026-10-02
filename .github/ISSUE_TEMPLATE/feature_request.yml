@@ -1,0 +1,97 @@
+name: Feature Request
+description: Propose new documentation for undocumented functions, environments, or globals.
+title: "[Feature]: "
+labels:
+  - kind:enhancement
+  - status:needs-triage
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request documentation for missing, undocumented, or newly added functions, libraries, or global environment methods.
+
+        > **Important:** This template is strictly for functions that are **already implemented** in at least one executor or environment. If you want to propose an entirely new, non-existent function idea, please suggest it in the **Discord server** instead of opening an issue here.
+
+  - type: checkboxes
+    attributes:
+      label: Duplicate check
+      description: Check if an issue or pull request already exists for this function.
+      options:
+        - label: I have searched existing issues and PRs
+          required: true
+
+  - type: input
+    id: function_name
+    attributes:
+      label: Function / API name
+      description: The exact function, method, or global name you want documented.
+      placeholder: "e.g., hookfunction, getgc, getgenv, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: API Category / Group
+      description: What category does this function belong to?
+      options:
+        - System (miscellaneous)
+        - Environment
+        - Metatable
+        - Closures
+        - Debug
+        - Filesystem
+        - Scripts
+        - Instances
+        - Signals
+        - Input
+        - Cryptography
+        - Encoding
+        - HTTP Networking
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_signature
+    attributes:
+      label: Expected signature & return types
+      description: Provide the function signature, argument types, and return values if known.
+      placeholder: |
+        function readfile(path: string): (string, string?)
+    validations:
+      required: false
+
+  - type: textarea
+    id: function_description
+    attributes:
+      label: Behavior & intended use
+      description: Describe what this function does and why it should be documented.
+      placeholder: "Explains how the function operates, edge cases, and typical usage in scripts."
+    validations:
+      required: true
+
+  - type: textarea
+    id: code_example
+    attributes:
+      label: Code example
+      description: Provide a minimal code snippet demonstrating the function.
+      placeholder: |
+        local originalPrint
+        originalPrint = hookfunction(print, newcclosure(function(...)
+            originalPrint("[Intercepted]", ...)
+        end))
+
+        print("Hello World!") -- Prints: [Intercepted] Hello World!
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References / Source
+      description: Mention any executor implementations, Luau/Lua standard equivalents, or community repos where this is used.
+      placeholder: "Similar to UNC/sUNC specification or <ExecutorName> documentation."
+    validations:
+      required: false

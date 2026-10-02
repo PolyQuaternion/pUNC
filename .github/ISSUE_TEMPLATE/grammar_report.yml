@@ -1,0 +1,56 @@
+name: Grammar report
+description: Report grammar or typo errors in documentation.
+title: "[Grammar]: "
+labels:
+  - kind:documentation
+  - status:needs-triage
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue with the documentation! Please fill out the template below with the location of the error and your proposed fix.
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL or file path
+      description: Where is this error located? Provide the documentation link or the file path in the repository.
+      placeholder: "https://punc.bjarnos.dev/... or docs/closures.md -> hookfunction"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_text
+    attributes:
+      label: Current text
+      description: Copy and paste the sentence, paragraph, or code comment containing the error.
+      placeholder: "Paste the excerpt with the typo or grammatical issue here."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_correction
+    attributes:
+      label: Suggested correction
+      description: How should this text be written?
+      placeholder: "Provide the corrected wording here."
+    validations:
+      required: true
+
+  - type: textarea
+    id: explanation
+    attributes:
+      label: Context or reasoning
+      description: Explain why this is incorrect or confusing, if relevant.
+      placeholder: "Example: Subject-verb agreement issue, misspelled technical term, unclear phrasing, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If the issue involves formatting, rendering, or is easier to spot visually, attach an image here.
+    validations:
+      required: false

@@ -1,0 +1,83 @@
+name: Documentation Question
+description: Ask a question about an exploit function, environment global, or unclear documentation.
+title: "[Question]: "
+labels:
+  - kind:question
+  - status:needs-triage
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template if you have questions about how a specific function works, unclear documentation, or expected execution behavior.
+
+        > **Note:** If you need assistance or support for **Quaternion**, please ask directly in the Discord server instead of opening an issue here.
+
+  - type: checkboxes
+    attributes:
+      label: Search before asking
+      description: Check if your question has already been answered.
+      options:
+        - label: I have searched existing issues, discussions, and docs
+          required: true
+
+  - type: input
+    id: topic_function
+    attributes:
+      label: Function / Topic
+      description: Which function, API, or concept is your question about?
+      placeholder: "e.g., getgc, getrawmetatable, hookmetamethod, calling conventions"
+    validations:
+      required: true
+
+  - type: input
+    id: doc_link
+    attributes:
+      label: Documentation link (if applicable)
+      description: Link to the specific doc page related to your question.
+      placeholder: "https://punc.bjarnos.dev/... or docs/closures.md -> hookfunction"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: question_type
+    attributes:
+      label: What type of question is this?
+      description: Choose the option that best describes your inquiry.
+      options:
+        - Clarification on existing docs (confusing or incomplete explanation)
+        - Function behavior / Return values
+        - Compatibility / Executor support
+        - Usage / Code pattern question
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question_details
+    attributes:
+      label: Your question
+      description: Explain clearly what you are trying to understand or accomplish.
+      placeholder: "Describe what is unclear or what behavior you are trying to confirm."
+    validations:
+      required: true
+
+  - type: textarea
+    id: code_attempt
+    attributes:
+      label: Code snippet (optional)
+      description: Provide the script or snippet you are testing with.
+      placeholder: |
+        local env = getgenv()
+        print(env)
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Mention any executor, runtime environment details, or error outputs if relevant.
+      placeholder: "e.g., Tested on custom build, comparing against standard Luau behavior, etc."
+    validations:
+      required: false
