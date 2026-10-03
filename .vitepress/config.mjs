@@ -7,7 +7,7 @@ export default defineConfig({
   base: process.env.BASE_PATH || '/',
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://punc.bjarnos.dev/'
+    hostname: 'https://punc.quaternion.vip/'
   },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/pUNC.svg' }]

@@ -16,7 +16,7 @@ body:
     attributes:
       label: Page URL or file path
       description: Where is this error located? Provide the documentation link or the file path in the repository.
-      placeholder: "https://punc.bjarnos.dev/... or docs/closures.md -> hookfunction"
+      placeholder: "https://punc.quaternion.vip/... or docs/closures.md -> hookfunction"
     validations:
       required: true
 

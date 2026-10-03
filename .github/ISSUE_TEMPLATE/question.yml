@@ -35,7 +35,7 @@ body:
     attributes:
       label: Documentation link (if applicable)
       description: Link to the specific doc page related to your question.
-      placeholder: "https://punc.bjarnos.dev/... or docs/closures.md -> hookfunction"
+      placeholder: "https://punc.quaternion.vip/... or docs/closures.md -> hookfunction"
     validations:
       required: false
 

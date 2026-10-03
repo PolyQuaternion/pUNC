@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://punc.bjarnos.dev/sitemap.xml
+Sitemap: https://punc.quaternion.vip/sitemap.xml

@@ -4,23 +4,23 @@
 
 ## Overview
 
-- [Introduction](https://punc.bjarnos.dev/): Introduction to pUNC philosophy, compliance badge, and test suite runner.
+- [Introduction](https://punc.quaternion.vip/): Introduction to pUNC philosophy, compliance badge, and test suite runner.
 
 ## API Modules
 
-- [System](https://punc.bjarnos.dev/docs/system): System information, identity, executor metadata (identifyexecutor, getexecutorname), and clipboard APIs (setclipboard, getclipboard).
-- [Environment](https://punc.bjarnos.dev/docs/environment): Global environment manipulation (getgenv, getrenv, getreg).
-- [Metatable](https://punc.bjarnos.dev/docs/metatable): Read-only state management (isreadonly, setreadonly), metatable inspection (getrawmetatable, setrawmetatable), and metamethod interception (hookmetamethod).
-- [Closures](https://punc.bjarnos.dev/docs/closures): C/Luau closure manipulation, function hooking (hookfunction), newcclosure, clonefunction, and upvalue/constant utilities.
-- [Debug](https://punc.bjarnos.dev/docs/debug): Luau debug library extensions for inspecting stacks, upvalues, constants, and protos.
-- [Filesystem](https://punc.bjarnos.dev/docs/filesystem): Sandboxed filesystem operations (readfile, writefile, appendfile, isfile, isfolder, makefolder, delfolder, delfile, listfiles).
-- [Scripts](https://punc.bjarnos.dev/docs/scripts): Script execution (loadstring), bytecode decompilation (decompile), disassembly (disassemble), and script environment utilities (getsenv, getscriptclosure).
-- [Instances](https://punc.bjarnos.dev/docs/instances): Polytoria game object query and manipulation APIs (getinstances, getnilinstances, fireclickdetector, fireproximityprompt, etc.).
-- [Signals](https://punc.bjarnos.dev/docs/signals): Signal connection manipulation and firing (getconnections, firesignal).
-- [Input](https://punc.bjarnos.dev/docs/input): Virtual input simulation (mouse click, key press/release, scroll).
-- [Cryptography](https://punc.bjarnos.dev/docs/cryptography): Hashing (MD5, SHA-1, SHA-256, SHA-384, SHA-512) and AES encryption/decryption utilities.
-- [Encoding](https://punc.bjarnos.dev/docs/encoding): Base64 and URL encoding/decoding utilities (base64encode, base64decode, urlencode, urldecode).
-- [HTTP Networking](https://punc.bjarnos.dev/docs/http): HTTP requests (httpget, httprequest) and networking utilities.
+- [System](https://punc.quaternion.vip/docs/system): System information, identity, executor metadata (identifyexecutor, getexecutorname), and clipboard APIs (setclipboard, getclipboard).
+- [Environment](https://punc.quaternion.vip/docs/environment): Global environment manipulation (getgenv, getrenv, getreg).
+- [Metatable](https://punc.quaternion.vip/docs/metatable): Read-only state management (isreadonly, setreadonly), metatable inspection (getrawmetatable, setrawmetatable), and metamethod interception (hookmetamethod).
+- [Closures](https://punc.quaternion.vip/docs/closures): C/Luau closure manipulation, function hooking (hookfunction), newcclosure, clonefunction, and upvalue/constant utilities.
+- [Debug](https://punc.quaternion.vip/docs/debug): Luau debug library extensions for inspecting stacks, upvalues, constants, and protos.
+- [Filesystem](https://punc.quaternion.vip/docs/filesystem): Sandboxed filesystem operations (readfile, writefile, appendfile, isfile, isfolder, makefolder, delfolder, delfile, listfiles).
+- [Scripts](https://punc.quaternion.vip/docs/scripts): Script execution (loadstring), bytecode decompilation (decompile), disassembly (disassemble), and script environment utilities (getsenv, getscriptclosure).
+- [Instances](https://punc.quaternion.vip/docs/instances): Polytoria game object query and manipulation APIs (getinstances, getnilinstances, fireclickdetector, fireproximityprompt, etc.).
+- [Signals](https://punc.quaternion.vip/docs/signals): Signal connection manipulation and firing (getconnections, firesignal).
+- [Input](https://punc.quaternion.vip/docs/input): Virtual input simulation (mouse click, key press/release, scroll).
+- [Cryptography](https://punc.quaternion.vip/docs/cryptography): Hashing (MD5, SHA-1, SHA-256, SHA-384, SHA-512) and AES encryption/decryption utilities.
+- [Encoding](https://punc.quaternion.vip/docs/encoding): Base64 and URL encoding/decoding utilities (base64encode, base64decode, urlencode, urldecode).
+- [HTTP Networking](https://punc.quaternion.vip/docs/http): HTTP requests (httpget, httprequest) and networking utilities.
 
 ## Compliance Suite
 
