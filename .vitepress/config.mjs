@@ -17,7 +17,8 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Modules', link: '/docs/system' },
-      { text: 'About us', link: 'https://github.com/PolyQuaternion' }
+      { text: 'About us', link: 'https://github.com/PolyQuaternion' },
+      { text: 'Community', link: 'https://discord.gg/NEhkQy2TuK' }
     ],
     sidebar: [
       {

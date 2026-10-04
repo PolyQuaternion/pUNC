@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: View on Github
       link: "https://github.com/PolyQuaternion/pUNC"
+    - theme: alt
+      text: Join the Discord
+      link: "https://discord.gg/NEhkQy2TuK"
 
 features:
   - title: 13 Core Modules
