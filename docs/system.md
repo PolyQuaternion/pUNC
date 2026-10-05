@@ -47,12 +47,12 @@ end
 
 ## `getcustomasset`
 
-Loads a local asset file from the workspace/filesystem, decodes it into the game engine's resource cache, and generates a synthetic asset ID string that can be assigned directly to asset properties such as `UIImage.ImageID`, `Sound.AudioID`, or `Model.MeshID`.
+Loads a local asset file from the workspace/filesystem, decodes it into the game engine's resource cache, and generates a synthetic asset ID that can be assigned directly to asset properties such as `UIImage.ImageID`, `Sound.AudioID`, or `Model.MeshID`.
 
 Supported formats include images (`.png`, `.jpg`, `.jpeg`, `.webp`, `.svg`, `.tga`, `.bmp`), audio files (`.mp3`, `.ogg`, `.wav`), and 3D meshes/scenes (`.glb`, `.gltf`).
 
 ```lua
-function getcustomasset(filePath: string, noCache: boolean?): string
+function getcustomasset(filePath: string, noCache: boolean?): number
 ```
 
 ### Parameters
@@ -64,7 +64,7 @@ function getcustomasset(filePath: string, noCache: boolean?): string
 
 ### Returns
 
-- `string` - The numeric asset ID string representing the loaded resource (e.g. `"900000001"`).
+- `number` - The numeric asset ID representing the loaded resource (e.g. `900000001`).
 
 ### Example
 
@@ -77,10 +77,9 @@ local response = request({
 })
 
 writefile(filePath, response.Body)
-local customAssetId = getcustomasset(filePath)
 
 local sound = Instance.New("Sound")
-sound.SoundID = tonumber(customAssetId)
+sound.SoundID = getcustomasset(filePath)
 sound.Loop = false
 sound.PlayInWorld = false
 sound.Parent = Environment

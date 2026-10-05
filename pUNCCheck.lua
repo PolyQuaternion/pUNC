@@ -89,14 +89,13 @@ test("getcustomasset", function()
     writefile(testFile, samplePng)
 
     local assetId = getcustomasset(testFile)
-    assertType(assetId, "string", "getcustomasset must return a string asset ID")
-    assert(#assetId > 0, "getcustomasset returned empty asset ID")
+    assertType(assetId, "number", "getcustomasset must return a number asset ID")
 
     local cachedId = getcustomasset(testFile)
     assertEqual(cachedId, assetId, "getcustomasset should return cached ID by default")
 
     local freshId = getcustomasset(testFile, true)
-    assertType(freshId, "string", "getcustomasset with noCache must return a string asset ID")
+    assertType(freshId, "number", "getcustomasset with noCache must return a number asset ID")
 
     delfile(testFile)
 end)
