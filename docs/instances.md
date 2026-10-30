@@ -166,7 +166,7 @@ cache.replace(world, proxy)
 Simulates a physical collision touch or touch-ended event between two `Physical` instances, invoking their respective `Touched` or `TouchEnded` event signals.
 
 ```lua
-function firephysicaltouch(target: Physical, hit: Physical, ended: (boolean | number)?): ()
+function firephysicaltouch(target: Physical, hit: Physical?, ended: (boolean | number)?): boolean
 ```
 
 ### Parameters
@@ -174,8 +174,16 @@ function firephysicaltouch(target: Physical, hit: Physical, ended: (boolean | nu
 | Parameter | Description |
 | :--- | :--- |
 | `target` | The target `Physical` instance whose touch event will be triggered. |
-| `hit` | The other `Physical` instance involved in the collision. |
+| `hit` *(optional)* | The other `Physical` instance involved in the collision. Defaults to the local `Player`. |
 | `ended` *(optional)* | `true` or `1` to fire `TouchEnded`; `false`, `0`, or omitted to fire `Touched`. |
+
+### Returns
+
+- `boolean` - `true` if the touch event was successfully triggered within valid range (`AABB + 20`); otherwise `false`.
+
+::: warning Player Proximity Required
+The player must be close to the target object for the touch event to be valid. If the player is not close enough, the executor shouldn't move the player automatically. The script itself is responsible for moving the player close to the object, not the executor. If the player is out of range, this function returns `false`.
+:::
 
 ### Example
 
@@ -183,7 +191,12 @@ function firephysicaltouch(target: Physical, hit: Physical, ended: (boolean | nu
 local partA = Environment:FindChild("PartA")
 local partB = Environment:FindChild("PartB")
 if partA and partB then
-    firephysicaltouch(partA, partB, false) -- Fires Touched
+    local success = firephysicaltouch(partA, partB, false) -- Fires Touched
+    if success then
+        print("Touch event fired successfully")
+    else
+        print("Failed to fire touch event (player out of range)")
+    end
 end
 ```
 
@@ -212,10 +225,10 @@ end
 
 ## `fireinteractionprompt`
 
-Triggers the `Interacted` signal on an `InteractionPrompt` instance on behalf of the local player.
+Triggers the `Interacted` signal on an `InteractionPrompt` instance on behalf of the local player, executing the full hold and trigger state cycle.
 
 ```lua
-function fireinteractionprompt(prompt: InteractionPrompt): ()
+function fireinteractionprompt(prompt: InteractionPrompt): boolean
 ```
 
 ### Parameters
@@ -224,11 +237,24 @@ function fireinteractionprompt(prompt: InteractionPrompt): ()
 | :--- | :--- |
 | `prompt` | The `InteractionPrompt` instance to activate. |
 
+### Returns
+
+- `boolean` - `true` if the prompt was successfully activated within valid range (`MaxDistance + 10`); otherwise `false`.
+
+::: warning Player Proximity Required
+The player must be close to the prompt object (within its activation range). If the player is not close enough, the executor shouldn't move the player automatically. The script itself is responsible for moving the player close to the object, not the executor. If the player is out of range, this function returns `false`.
+:::
+
 ### Example
 
 ```lua
 local doorPrompt = Environment:FindChild("DoorPrompt")
 if doorPrompt then
-    fireinteractionprompt(doorPrompt)
+    local success = fireinteractionprompt(doorPrompt)
+    if success then
+        print("Prompt triggered successfully")
+    else
+        print("Failed to trigger prompt (out of range or invalid)")
+    end
 end
 ```
